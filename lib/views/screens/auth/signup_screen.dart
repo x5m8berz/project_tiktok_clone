@@ -35,7 +35,7 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             Stack(
               children: [
@@ -58,11 +58,11 @@ class SignupScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
               child: TextInputField(
                 controller: _usernameController,
                 labelText: 'Username',
@@ -70,11 +70,11 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
               child: TextInputField(
                 controller: _emailController,
                 labelText: 'Email',
@@ -86,19 +86,20 @@ class SignupScreen extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
               child: TextInputField(
                 controller: _passwordController,
                 labelText: 'Password',
                 icon: Icons.lock,
+                isObscure: true,
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 25,
             ),
             Container(
               width: MediaQuery.of(context).size.width - 40,
-              height: 50,
+              height: 45,
               decoration: BoxDecoration(
                 color: buttonColor,
                 borderRadius: const BorderRadius.all(
@@ -124,7 +125,7 @@ class SignupScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +133,7 @@ class SignupScreen extends StatelessWidget {
                 const Text(
                   'Already have an account? ',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 15,
                   ),
                 ),
                 InkWell(
@@ -141,7 +142,7 @@ class SignupScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Login',
-                    style: TextStyle(fontSize: 20, color: buttonColor),
+                    style: TextStyle(fontSize: 15, color: buttonColor),
                   ),
                 ),
               ],
