@@ -17,10 +17,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        onTap: (idx) {
+          setState(() {
+            pageIdx = idx;
+          });
+        },
         type: BottomNavigationBarType.fixed,
         backgroundColor: backgroundColor,
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.white,
+        currentIndex: pageIdx,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, size: 30),
@@ -44,9 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Home Screen'),
-      ),
+      body: pages[pageIdx],
     );
   }
 }
