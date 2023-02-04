@@ -14,6 +14,7 @@ class AuthController extends GetxController {
   late Rx<User?> _user;
   late Rx<File?> _pickedImage;
 
+  User get user => _user.value!;
   File? get profilePhoto => _pickedImage.value;
 
   @override
