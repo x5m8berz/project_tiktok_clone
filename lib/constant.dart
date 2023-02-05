@@ -8,10 +8,10 @@ import 'package:tiktok_clone/views/screens/video_screen.dart';
 
 List pages = [
   VideoScreen(),
-  Text('Search Screen'),
+  const Text('Search Screen'),
   const AddVideoScreen(),
-  Text('Messages Screen'),
-  Text('Profile Screen'),
+  const Text('Messages Screen'),
+  const Text('Profile Screen'),
 ];
 
 // Colors
